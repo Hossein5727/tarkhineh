@@ -1,6 +1,12 @@
 import type {Metadata} from "next";
 import {ReactNode} from "react";
+import localFont from 'next/font/local'
 import "./globals.css";
+
+const estedadFont = localFont({
+    src: "./fonts/Estedad-FD.woff2",
+    display: "swap",
+})
 
 export const metadata: Metadata = {
     title: "ترخینه",
@@ -10,9 +16,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: ReactNode; }>) {
     return (
         <html lang="en">
-        <body>
-        {children}
-        </body>
+            <body className={estedadFont.className}>
+              {children}
+            </body>
         </html>
     );
 }

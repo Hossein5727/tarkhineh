@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --color-primary-1: #E5F2E9;
+    --color-primary-2: #CAE4D3;
+    --color-primary-3: #B0D7BD;
+    --color-primary-4: #96C9A7;
+    --color-primary-5: #7CBC91;
+    --color-primary-6: #61AE7B;
+    --color-primary-7: #4E9968;
+    --color-primary-8: #417F56;
+    --color-primary-9: #396F4B;
+    --color-primary-10: #315F41;
+    --color-primary-11: #294F36;
+    --color-primary-12: #21402B;
+    --color-primary-13: #183020;
+    --color-primary-14: #102016;
+    --color-primary-15: #08100B;
+
+    --color-neutral-1: #FFFFFF;
+    --color-neutral-2: #F9F9F9;
+    --color-neutral-3: #E1E1E1;
+    --color-neutral-4: #EDEDED;
+    --color-neutral-5: #CBCBCB;
+    --color-neutral-6: #ADADAD;
+    --color-neutral-7: #757575;
+    --color-neutral-8: #717171;
+    --color-neutral-9: #353535;
+    --color-neutral-10: #0C0C0C;
+
+    --color-error: #C30000;
+    --color-error-light: #ED2E2E;
+    --color-error-extralight: #FFF2F2;
+
+    --color-success: #00966D;
+    --color-success-light: #00BA88;
+    --color-success-extralight: #F3FDFA;
+
+    --color-warning: #A9791C;
+    --color-warning-light: #F4B740;
+    --color-warning-extralight: #FFF8E1;
+
+
+    --rounded-xs: 0.25rem;
+    --rounded-sm: 0.5rem;
+    --rounded-md: 1rem;
+    --rounded-lg: 1.5rem;
+    --rounded-xl: 2rem;
+    --rounded-2xl: 4rem;
+
+    --shadow-2xs: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    --shadow-xs: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    --shadow-sm: 0 6px 6px 0 rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 8px 8px 0 rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 12px 12px 0 rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 16px 16px 0 rgba(0, 0, 0, 0.25);
+
+    --shadow-card: 0 25px 7px 0 rgba(0, 0, 0, 0),
+    0 16px 6px 0 rgba(0, 0, 0, 0.01),
+    0 9px 5px 0 rgba(0, 0, 0, 0.05),
+    0 4px 4px 0 rgba(0, 0, 0, 0.09),
+    0 1px 2px 0 rgba(0, 0, 0, 0.1),
+    0 0 0 0 rgba(0, 0, 0, 0.1);
+
+    --shadow-contantcard: 0 66px 18px 0 rgba(0, 0, 0, 0),
+    0 42px 17px 0 rgba(0, 0, 0, 0.01),
+    0 24px 14px 0 rgba(0, 0, 0, 0.05),
+    0 11px 11px 0 rgba(0, 0, 0, 0.09),
+    0 3px 6px 0 rgba(0, 0, 0, 0.1),
+    0 0 0 0 rgba(0, 0, 0, 0.1);
+
+    --spacing: 8px;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.text-display-1 {
+    @apply font-bold text-[64px] leading-[140%];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-display-2 {
+    @apply font-bold text-[56px] leading-[120%];
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.text-heading-1 {
+    @apply font-bold text-[44px] leading-[140%];
 }
+
+.text-heading-2 {
+    @apply font-bold text-[40px] leading-[140%];
+}
+
+.text-heading-3 {
+    @apply font-bold text-[32px] leading-[140%];
+}
+
+.text-heading-4 {
+    @apply font-bold text-[24px] leading-[140%];
+}
+
+.text-heading-5 {
+    @apply font-bold text-[20px] leading-[140%];
+}
+
+.text-heading-6 {
+    @apply font-bold text-[16px] leading-[140%];
+}
+
+.text-heading-7 {
+    @apply font-semibold text-[20px] leading-[180%];
+}
+
+.text-body-sm {
+    @apply font-normal text-[14px] leading-[180%];
+}
+
+.text-body-md {
+    @apply font-normal text-[16px] leading-[180%];
+}
+
+.text-body-lg {
+    @apply font-normal text-[18px] leading-[180%];
+}
+
+.text-body-xl {
+    @apply font-normal text-[20px] leading-[180%];
+}
+
+.text-caption-sm {
+    @apply font-normal text-[10px] leading-[180%];
+}
+
+.text-caption-md {
+    @apply font-normal text-[12px] leading-[180%];
+}
+
+.text-caption-lg {
+    @apply font-medium text-[14px] leading-[180%];
+}
+
+.text-btn-sm {
+    @apply font-medium text-[14px] leading-3;
+}
+
+.text-btn-lg {
+    @apply font-medium text-[16px] leading-[180%];
+}
+
+.text-overline-sm {
+    @apply font-bold text-[12px] tracking-[0.8px];
+}
+
+.text-overline-md {
+    @apply font-normal text-[16px] leading-[180%];
+}
+
